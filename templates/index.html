@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+    {% include "flashes.html" %}
+    <h1>The weather in {{location.city}}, {{location.state}}</h1>
+
+    <span></span>
+
+     {% if weather_icon == "clear-day" %}
+   <i class="wi wi-day-sunny"></i>
+{% elif weather_icon == "clear-night"%}
+   <i class="wi wi-night-clear"></i>
+{% elif weather_icon == "rain"%}
+    <i class="wi wi-rain"></i>
+{% elif weather_icon == "snow"%}
+    <i class="wi wi-snow"></i>
+{% elif weather_icon == "sleet"%}
+    <i class="wi wi-sleet"></i>
+{% elif weather_icon == "wind"%}
+    <i class="wi wi-wind"></i>
+{% elif weather_icon == "fog"%}
+    <i class="wi wi-fog"></i>
+{% elif weather_icon == "cloudy"%}
+    <i class="wi wi-cloudy"></i>
+{% elif weather_icon == "partly-cloudy-day"%}
+    <i class="wi wi-forecast-io-partly-cloudy-day"></i>
+{% elif weather_icon == "partly-cloudy-day"%}
+    <i class="wi wi-forecast-io-partly-cloudy-day"></i>
+{% else %}
+    <i class="wi wi-day-sunny"></i>
+
+ {% endif %}
+
+    <h1>Welcome Krishna! Here is how your day looks!</h1>
+
+
+
+<hr>
+
+    <h1>Welcome Abhiram! Here is how your day looks!</h1>
+
+
+{% endblock content %}
+
+{% block script %}
+
+{% endblock %}
